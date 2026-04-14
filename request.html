@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كهربتنا | 25 عاماً من الخبرة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --dark-blue: #1a3c5e;
+            --orange: #f37021;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: var(--light-bg); color: #333; line-height: 1.6; }
+
+        /* الهيدر واللوجو */
+        .top-nav { background: var(--white); padding: 15px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo-box img { width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--orange); }
+        .logo-box h1 { font-size: 22px; color: var(--dark-blue); margin-top: 5px; }
+
+        /* منطقة طلب فني (التركيز الأساسي) */
+        .hero-request { padding: 40px 20px; text-align: center; background: var(--white); border-bottom: 2px solid #eee; }
+        
+        .order-circle {
+            width: 160px; height: 160px; background: var(--orange); color: white;
+            border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-decoration: none; margin: 0 auto 25px; font-weight: bold; font-size: 20px;
+            border: 6px solid #fff; box-shadow: 0 10px 25px rgba(243, 112, 33, 0.4);
+            animation: pulse 2s infinite; transition: 0.3s;
+        }
+        .order-circle i { font-size: 35px; margin-bottom: 8px; }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 112, 33, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(243, 112, 33, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 112, 33, 0); }
+        }
+
+        /* ميزة الـ 60 دقيقة */
+        .fast-service { background: var(--dark-blue); color: white; padding: 15px; margin: 20px; border-radius: 15px; text-align: center; font-weight: bold; }
+        .fast-service i { color: var(--orange); font-size: 24px; animation: rocket 1s infinite alternate; }
+        @keyframes rocket { from { transform: translateX(0); } to { transform: translateX(-10px); } }
+
+        /* الإرشادات */
+        .instructions { max-width: 600px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-right: 6px solid var(--orange); }
+        .instructions h3 { margin-bottom: 15px; font-size: 18px; color: var(--dark-blue); }
+        .instructions li { list-style: none; margin-bottom: 10px; font-size: 14px; display: flex; gap: 10px; align-items: flex-start; }
+        .instructions li i { color: var(--orange); margin-top: 4px; }
+
+        /* قسم الخبرة والرؤية (عن كهربتنا) */
+        .about-section { padding: 40px 20px; background: var(--dark-blue); color: white; text-align: center; }
+        .stats { display: flex; justify-content: space-around; margin: 30px 0; flex-wrap: wrap; gap: 20px; }
+        .stat-item h4 { font-size: 30px; color: var(--orange); }
+        .stat-item p { font-size: 14px; opacity: 0.8; }
+        
+        .vision-box { max-width: 800px; margin: 0 auto; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .vision-box h2 { color: var(--orange); margin-bottom: 15px; }
+        .vision-box p { font-size: 16px; line-height: 1.8; margin-bottom: 20px; }
+
+        /* السوشيال ميديا */
+        .social-links { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+        .social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 18px; transition: 0.3s; }
+        .social-links a:hover { background: var(--orange); transform: translateY(-5px); }
+
+        footer { padding: 20px; text-align: center; background: #111; color: #666; font-size: 12px; }
+
+        /* متجاوب تماماً مع الموبايل */
+        @media (max-width: 600px) {
+            .order-circle { width: 140px; height: 140px; font-size: 18px; }
+            .stat-item { width: 45%; }
+            .vision-box p { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="logo-box">
+            <img src="121212.jpeg" alt="كهربتنا">
+            <h1>كهربـ<span style="color:var(--orange)">تنا</span></h1>
+        </div>
+    </nav>
+
+    <section class="hero-request">
+        <a href="https://wa.me/201037151696?text=أريد طلب فني صيانة. الاسم: ... العنوان: ... العطل: ..." class="order-circle">
+            <i class="fab fa-whatsapp"></i>
+            طلب فني
+        </a>
+
+        <div class="fast-service">
+            <i class="fas fa-rocket"></i> أول مرة في مصر: صيانة في 60 دقيقة فقط!
+        </div>
+
+        <div class="instructions">
+            <h3><i class="fas fa-list-check"></i> إرشادات الطلب السريع:</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> اضغط على الزر البرتقالي للانتقال للواتساب مباشرة.</li>
+                <li><i class="fas fa-check"></i> اكتب اسمك، عنوانك بالتفصيل، ونوع العطل.</li>
+                <li><i class="fas fa-check"></i> أرسل "لوكيشن ثابت" لتسريع وصول الفني.</li>
+                <li><i class="fas fa-check"></i> سنرسل لك "ليف لوكيشن" للفني لتتابعه حتى وصوله.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="vision-box">
+            <h2>رؤيتنا ومشروعنا</h2>
+            <p>
+                مشروع "كهربتنا" ليس مجرد خدمة صيانة، بل هو التزام بالأمان والجودة. انطلقنا برؤية تهدف لتطوير قطاع الخدمات الكهربائية في مصر من خلال توفير صنايعية متخصصين ومدربين على أعلى مستوى لضمان راحة بالك.
+            </p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <h4>25</h4>
+                <p>عاماً من الخبرة</p>
+            </div>
+            <div class="stat-item">
+                <h4>+900</h4>
+                <p>مشروعاً ناجحاً</p>
+            </div>
+            <div class="stat-item">
+                <h4>60</h4>
+                <p>دقيقة للوصول</p>
+            </div>
+            <div class="stat-item">
+                <h4>100%</h4>
+                <p>صنايعية متخصصين</p>
+            </div>
+        </div>
+
+        <div class="vision-box">
+            <p>لدينا تاريخ عريق يمتد لـ 25 عاماً في السوق المصري، نفذنا خلالها مئات المشاريع الكبرى والمنزلية بدقة متناهية، مما جعلنا الاختيار الأول لكل من يبحث عن الأمان والسرعة.</p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1FrMy3ZsET/"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 جميع الحقوق محفوظة لشركة كهربتنا | تواصل معنا: +201037151696
+    </footer>
+
+</body>
+</html>

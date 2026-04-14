@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"  content="hossam abdo">
+    <title>كهربتنا | خدمات كهربائية متكاملة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --dark-blue: #1a3c5e;
+            --main-blue: #2c5a85;
+            --soft-blue: #4a7bb0;
+            --orange: #f37021;
+            --white: #ffffff;
+            --footer-bg: #0d1b2a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; transition: all 0.3s ease; }
+        body { background: #fdfdfd; overflow-x: hidden; }
+
+        /* الناف بار العلوي */
+        .top-nav { background: var(--soft-blue); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .top-socials a { color: white; margin: 0 10px; font-size: 16px; text-decoration: none; }
+        .lang-switcher { background: var(--orange); color: white; border: none; padding: 5px 15px; border-radius: 20px; cursor: pointer; font-weight: bold; }
+
+        /* الناف بار الرئيسي */
+        .navbar { background: var(--dark-blue); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .logo-box { color: white; display: flex; align-items: center; gap: 10px; }
+        .logo-box img { width: 45px; height: 45px; border-radius: 50%; background: white; }
+        .nav-links a { color: white; text-decoration: none; margin: 0 10px; font-size: 15px; }
+        .btn-request { background: var(--orange); padding: 10px 20px; border-radius: 5px; color: white !important; font-weight: bold; text-decoration: none; }
+
+        /* السلايدر الرئيسي */
+        .hero { height: 400px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/id/192/1200/600'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 20px; }
+        .hero-content h1 { font-size: clamp(22px, 5vw, 40px); margin-bottom: 15px; }
+
+        /* شريط الأنيميشن */
+        .electric-belt { background: var(--main-blue); padding: 15px 0; overflow: hidden; white-space: nowrap; }
+        .belt-icons { display: inline-block; animation: moveBelt 15s linear infinite; }
+        .belt-icons i { color: var(--orange); font-size: 24px; margin: 0 50px; }
+        @keyframes moveBelt { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
+
+        /* الأقسام (4 أقسام متجاوبة) */
+        .section-container { padding: 40px 5%; }
+        .card { background: white; border-radius: 20px; overflow: hidden; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .card-body { padding: 25px; text-align: center; }
+        .card-body h2 { color: var(--dark-blue); margin-bottom: 12px; font-size: 24px; border-bottom: 2px solid var(--orange); display: inline-block; padding-bottom: 5px; }
+        .card-body p { color: #555; line-height: 1.7; font-size: 15px; }
+
+        /* الفوتر العملاق */
+        .footer { background: var(--footer-bg); color: white; padding: 60px 5% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .footer-col h3 { color: var(--orange); margin-bottom: 20px; }
+        .footer-col li { list-style: none; margin-bottom: 10px; opacity: 0.8; }
+        .wa-float { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 999; animation: pulse 2s infinite; text-decoration: none; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; gap: 10px; text-align: center; }
+            .nav-links { margin-bottom: 10px; }
+            .card img { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav">
+        <div class="top-socials">
+            <a href="https://www.facebook.com/share/1FrMy3ZsET/"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="lang-switcher" onclick="switchLang()" id="langBtn">English</button>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo-box">
+            <img src="121212.jpeg" alt="Logo">
+            <h2 id="txt-logo">كهربـ<span style="color:var(--orange)">تنا</span></h2>
+        </div>
+        <div class="nav-links">
+            <a href="#" id="txt-nav-home">الرئيسية</a>
+            <a href="request.html" class="btn-request" id="txt-nav-btn">طلب فني مباشر</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="txt-hero-h1">نحن نصنع الضوء.. ونضمن الأمان</h1>
+            <p id="txt-hero-p">أكثر من 25 عاماً من الخبرة في تأسيس وتشطيب وصيانة شبكات الكهرباء والكنترول</p>
+        </div>
+    </section>
+
+    <div class="electric-belt">
+        <div class="belt-icons">
+            <i class="fas fa-bolt"></i> <i class="fas fa-plug"></i> <i class="fas fa-lightbulb"></i> 
+            <i class="fas fa-bolt"></i> <i class="fas fa-microchip"></i> <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="card">
+            <img src="taasis.jpeg" alt="Tasis">
+            <div class="card-body">
+                <h2 id="txt-s-tasis-h">قسم التأسيس</h2>
+                <p id="txt-s-tasis-p">تأسيس شبكات الكهرباء للمنازل والمنشآت بأجود الخامات ووفق المخططات الهندسية لضمان الأمان الكامل.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="tashtib.jpeg" alt="Finish">
+            <div class="card-body">
+                <h2 id="txt-s-finish-h">قسم التشطيبات والديكور</h2>
+                <p id="txt-s-finish-p">تركيب أحدث أنظمة الإنارة، البروفايل لايت، والنجف بلمسات فنية تبرز جمال ديكور منزلك.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="ciana.jpeg" alt="Repair">
+            <div class="card-body">
+                <h2 id="txt-s-repair-h">قسم الصيانة</h2>
+                <p id="txt-s-repair-p">خدمة صيانة فورية للأعطال المنزلية والطارئة أسرع من الصاروخ، نصلك في أقل من 60 دقيقة.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="control.jpeg" alt="Control">
+            <div class="card-body">
+                <h2 id="txt-s-control-h">قسم الكنترول</h2>
+                <p id="txt-s-control-p">تصميم وتنفيذ لوحات التحكم الآلي (Classic Control) وصيانة أنظمة القوى للمصانع والورش.</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/201037151696" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 id="txt-f1-h">عن كهربتنا</h3>
+                <p id="txt-f1-p">خبرة 25 عاماً وأكثر من 900 مشروع ناجح. نحن الاختيار الأول للأمان والسرعة في مصر.</p>
+            </div>
+            <div class="footer-col">
+                <h3 id="txt-f2-h">تواصل مباشر</h3>
+                <p><i class="fas fa-phone"></i> +201037151696</p>
+                <p><i class="fas fa-location-dot"></i> نخدمك في جميع أنحاء الجمهورية</p>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:30px; opacity:0.5; font-size:12px;" id="txt-copy">
+            جميع الحقوق محفوظة لشركة كهربتنا &copy; 2026
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = 'ar';
+        const content = {
+            ar: {
+                langBtn: "English", logo: "كهربـ<span style='color:#f37021'>تنا</span>",
+                navHome: "الرئيسية", navBtn: "طلب فني مباشر",
+                heroH1: "نحن نصنع الضوء.. ونضمن الأمان",
+                heroP: "أكثر من 25 عاماً من الخبرة في تأسيس وتشطيب وصيانة شبكات الكهرباء والكنترول",
+                sTasisH: "قسم التأسيس", sTasisP: "تأسيس شبكات الكهرباء للمنازل والمنشآت بأجود الخامات ووفق المخططات الهندسية.",
+                sFinishH: "قسم التشطيبات والديكور", sFinishP: "تركيب أحدث أنظمة الإنارة، البروفايل لايت، والنجف بلمسات فنية تبرز جمال منزلك.",
+                sRepairH: "قسم الصيانة", sRepairP: "خدمة صيانة فورية للأعطال المنزلية والطارئة، نصلك في أقل من 60 دقيقة.",
+                sControlH: "قسم الكنترول", sControlP: "تصميم وتنفيذ لوحات التحكم الآلي وصيانة أنظمة القوى للمصانع والورش.",
+                f1H: "عن كهربتنا", f1P: "خبرة 25 عاماً وأكثر من 900 مشروع ناجح. نحن الاختيار الأول للأمان والسرعة في مصر.",
+                f2H: "تواصل مباشر", copy: "جميع الحقوق محفوظة لشركة كهربتنا &copy; 2026"
+            },
+            en: {
+                langBtn: "العربية", logo: "Kahrebetna",
+                navHome: "Home", navBtn: "Request Technician",
+                heroH1: "We Create Light.. We Ensure Safety",
+                heroP: "Over 25 years of experience in electrical installation, finishing, maintenance, and control.",
+                sTasisH: "Installation Dept", sTasisP: "Founding electrical networks for homes and facilities with the best materials and plans.",
+                sFinishH: "Finishing & Decor", sFinishP: "Installing the latest lighting systems and chandeliers with artistic touches for your home.",
+                sRepairH: "Maintenance Dept", sRepairP: "Immediate maintenance service for home and emergency faults, arriving in under 60 minutes.",
+                sControlH: "Control Dept", sControlP: "Designing and implementing automation control panels and power systems for factories.",
+                f1H: "About Us", f1P: "25 years of experience and over 900 successful projects. We are the first choice in Egypt.",
+                f2H: "Contact Us", copy: "All Rights Reserved to Kahrebetna &copy; 2026"
+            }
+        };
+
+        function switchLang() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            const html = document.getElementById('htmlTag');
+            const data = content[currentLang];
+            html.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = data.langBtn;
+            document.getElementById('txt-logo').innerHTML = data.logo;
+            document.getElementById('txt-nav-home').innerText = data.navHome;
+            document.getElementById('txt-nav-btn').innerText = data.navBtn;
+            document.getElementById('txt-hero-h1').innerText = data.heroH1;
+            document.getElementById('txt-hero-p').innerText = data.heroP;
+            document.getElementById('txt-s-tasis-h').innerText = data.sTasisH;
+            document.getElementById('txt-s-tasis-p').innerText = data.sTasisP;
+            document.getElementById('txt-s-finish-h').innerText = data.sFinishH;
+            document.getElementById('txt-s-finish-p').innerText = data.sFinishP;
+            document.getElementById('txt-s-repair-h').innerText = data.sRepairH;
+            document.getElementById('txt-s-repair-p').innerText = data.sRepairP;
+            document.getElementById('txt-s-control-h').innerText = data.sControlH;
+            document.getElementById('txt-s-control-p').innerText = data.sControlP;
+            document.getElementById('txt-f1-h').innerText = data.f1H;
+            document.getElementById('txt-f1-p').innerText = data.f1P;
+            document.getElementById('txt-f2-h').innerText = data.f2H;
+            document.getElementById('txt-copy').innerHTML = data.copy;
+        }
+    </script>
+</body>
+</html>
