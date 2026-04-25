@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>خدمة العملاء | كهربتنا</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: { colors: { brand: '#008ba3', darkBg: '#121212', darkCard: '#1e1e1e' } }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .bg-pattern { background-color: #f9fafb; background-image: radial-gradient(#008ba312 1px, transparent 0); background-size: 20px 20px; }
+    </style>
+</head>
+<body class="bg-pattern dark:bg-darkBg min-h-screen p-6">
+
+    <div class="max-w-md mx-auto mb-6 flex justify-between items-center">
+        <a href="index.html" class="text-gray-400 hover:text-brand font-bold text-sm transition-all">
+            <i class="fas fa-arrow-right"></i> العودة
+        </a>
+        <img src="kkkkkkk.jpeg" class="h-10 w-10 rounded-xl shadow-sm">
+    </div>
+
+    <div class="max-w-md mx-auto space-y-6">
+        
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-black text-brand mb-2">مركز الدعم</h1>
+            <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">Customer Care & Support</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+            <a href="tel:01037165697" class="bg-white dark:bg-darkCard p-6 rounded-[2rem] text-center shadow-sm border border-gray-100 dark:border-gray-800 active:scale-95 transition-all">
+                <i class="fas fa-phone-alt text-2xl text-brand mb-3"></i>
+                <p class="text-[11px] font-black">اتصال هاتفي</p>
+            </a>
+            <a href="https://wa.me/201037165697?text=اريد تقديم شكوى بخصوص:" class="bg-white dark:bg-darkCard p-6 rounded-[2rem] text-center shadow-sm border border-gray-100 dark:border-gray-800 active:scale-95 transition-all">
+                <i class="fas fa-exclamation-circle text-2xl text-red-500 mb-3"></i>
+                <p class="text-[11px] font-black">تقديم شكوى</p>
+            </a>
+        </div>
+
+        <div class="bg-white dark:bg-darkCard rounded-[2.5rem] p-6 shadow-xl border border-brand/5">
+            <h3 class="text-lg font-black text-gray-700 dark:text-white mb-6 border-r-4 border-brand pr-3">إسألنا عبر الواتساب</h3>
+            
+            <div class="space-y-3">
+                <a href="https://wa.me/201037165697?text=استفسار عن اسعار المعاينة والخدمة" class="flex items-center justify-between bg-gray-50 dark:bg-darkBg p-4 rounded-2xl hover:bg-brand/5 transition-all group">
+                    <span class="text-sm font-bold text-gray-600 dark:text-gray-300">ما هي أسعار المعاينة والخدمة؟</span>
+                    <i class="fab fa-whatsapp text-green-500 text-xl group-hover:scale-125 transition-transform"></i>
+                </a>
+
+                <a href="https://wa.me/201037165697?text=هل يوجد ضمان على أعمال الصيانة؟" class="flex items-center justify-between bg-gray-50 dark:bg-darkBg p-4 rounded-2xl hover:bg-brand/5 transition-all group">
+                    <span class="text-sm font-bold text-gray-600 dark:text-gray-300">هل يوجد ضمان على أعمال الصيانة؟</span>
+                    <i class="fab fa-whatsapp text-green-500 text-xl group-hover:scale-125 transition-transform"></i>
+                </a>
+
+                <a href="https://wa.me/201037165697?text=اريد تتبع وصول الفني الخاص بي" class="flex items-center justify-between bg-gray-50 dark:bg-darkBg p-4 rounded-2xl hover:bg-brand/5 transition-all group">
+                    <span class="text-sm font-bold text-gray-600 dark:text-gray-300">أريد تتبع وصول الفني الآن</span>
+                    <i class="fab fa-whatsapp text-green-500 text-xl group-hover:scale-125 transition-transform"></i>
+                </a>
+
+                <a href="https://wa.me/201037165697?text=ما هي المناطق التي تغطيها الخدمة؟" class="flex items-center justify-between bg-gray-50 dark:bg-darkBg p-4 rounded-2xl hover:bg-brand/5 transition-all group">
+                    <span class="text-sm font-bold text-gray-600 dark:text-gray-300">ما هي المناطق التي تغطيها الخدمة؟</span>
+                    <i class="fab fa-whatsapp text-green-500 text-xl group-hover:scale-125 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-brand/10 border border-brand/20 p-4 rounded-3xl text-center">
+            <p class="text-[10px] text-brand font-black tracking-widest uppercase">
+                <i class="fas fa-headset ml-1"></i> نحن متواجدون لخدمتك على مدار الساعة
+            </p>
+        </div>
+    </div>
+
+    <footer class="mt-12 text-center">
+        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-widest">Web Managed by: <span class="text-brand">Hossam Abdo</span></p>
+    </footer>
+
+</body>
+</html>

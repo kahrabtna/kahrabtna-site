@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آراء العملاء الحقيقية | كهربتنا</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Cairo', sans-serif; background-color: #f9fafb; } </style>
+</head>
+<body class="pb-10">
+
+    <div class="bg-[#008ba3] p-8 pb-20 rounded-b-[3rem] text-center text-white shadow-lg">
+        <h1 class="text-2xl font-black mb-2 italic">فني الشهر 🏆</h1>
+        <div class="mt-4 relative inline-block">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="w-20 h-20 rounded-full border-4 border-yellow-400 mx-auto bg-gray-100">
+        </div>
+        <h2 class="mt-2 font-bold">Unkown </h2>
+    </div>
+
+    <div class="max-w-md mx-auto -mt-10 px-4">
+        <div class="bg-white p-6 rounded-[2.5rem] shadow-xl mb-8">
+            <h3 class="text-center font-black text-[#008ba3] mb-4 text-sm">اترك تقييمك الحقيقي هنا</h3>
+            
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;  
+                    this.page.identifier = 'kahrabtna_reviews'; 
+                };
+                (function() { 
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://kahrabtna.disqus.com/embed.js'; // ستحتاج لإنشاء حساب مجاني على Disqus ووضع اسم موقعك هنا
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>يرجى تفعيل الجافا سكريبت لمشاهدة التعليقات.</noscript>
+        </div>
+
+        <div class="text-center">
+            <a href="index.html" class="text-[#008ba3] font-bold text-xs underline">العودة للرئيسية</a>
+        </div>
+    </div>
+
+</body>
+</html>

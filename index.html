@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="mainHtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kahrabtna | كهربتنا</title>
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#008ba3">
+    <link rel="apple-touch-icon" href="kkkkkkk.jpeg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { brand: '#008ba3', darkBg: '#121212', darkCard: '#1e1e1e' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; transition: all 0.3s ease; overflow-x: hidden; }
+        [lang="en"] body { font-family: 'Poppins', sans-serif; }
+        
+        .lang-en { display: none !important; }
+        [lang="en"] .lang-en { display: block !important; }
+        [lang="en"] .lang-ar { display: none !important; }
+        
+        #menuContent { transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s; }
+        .menu-hidden { transform: scale(0.9) translateY(-20px); opacity: 0; pointer-events: none; }
+        .menu-visible { transform: scale(1) translateY(0); opacity: 1; pointer-events: auto; }
+        
+        .project-card { transition: transform 0.3s ease; }
+        .project-card:active { transform: scale(0.98); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-white">
+
+    <nav class="bg-brand text-white py-2 px-4 flex justify-between items-center shadow-md">
+        <div class="flex gap-4 items-center text-sm">
+            <a href="https://www.facebook.com/share/18oVDbP1Mz/" class="hover:scale-125 transition-transform"><i class="fab fa-facebook-f"></i></a>
+            <a href="tiktok.com/@kahrabtna" class="hover:scale-125 transition-transform"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/201037165697" class="hover:scale-125 transition-transform"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="flex gap-2">
+            <button onclick="toggleLang()" class="bg-white/20 px-3 py-1 rounded-full text-[10px] font-bold">
+                <span class="lang-ar">EN</span><span class="lang-en">AR</span>
+            </button>
+            <button id="themeToggle" class="bg-white/20 p-2 rounded-full text-xs">
+                <i class="fas fa-moon dark:hidden"></i>
+                <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-darkBg/90 backdrop-blur-md px-4 py-3 flex justify-between items-center border-b border-gray-200 dark:border-gray-800">
+        <div class="flex items-center gap-3">
+            <img src="kkkkkkk.jpeg" alt="Logo" class="h-10 w-10 object-contain rounded-md">
+            <span class="font-extrabold text-xl tracking-tight uppercase text-brand">Kahrabtna</span>
+        </div>
+        <button id="menuBtn" class="bg-gray-100 dark:bg-darkCard w-12 h-12 rounded-xl flex flex-col items-center justify-center gap-1.5 active:scale-90 transition-all">
+            <span class="w-6 h-0.5 bg-brand rounded-full"></span><span class="w-6 h-0.5 bg-brand rounded-full"></span><span class="w-6 h-0.5 bg-brand rounded-full"></span>
+        </button>
+    </header>
+
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden flex items-center justify-center px-6">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="toggleMenu(false)"></div>
+        <div id="menuContent" class="relative bg-white dark:bg-darkCard w-full max-w-sm rounded-[2.5rem] p-8 shadow-2xl menu-hidden border border-brand/20 text-center">
+            <div class="flex flex-col gap-5 font-bold">
+                <a href="#" class="text-brand lang-ar">الرئيسية</a><a href="#" class="text-brand lang-en">Home</a>
+                <a href="#about" class="lang-ar">من نحن</a><a href="#about" class="lang-en">About Us</a>
+                <a href="#projects" class="lang-ar">سابقة الأعمال</a><a href="#projects" class="lang-en">Portfolio</a>
+                <a href="courses.html" class="lang-ar text-brand"><i class="fas fa-graduation-cap ml-1"></i> كورسات تعليمية</a>
+                <hr class="border-gray-100 dark:border-gray-800">
+                <a href="review.html" class="lang-ar text-blue-600">تقييم الخدمة أو الفني</a>
+                <a href="customer-care.html" class="lang-ar">خدمة العملاء</a>
+                <a href="staff.html" class="lang-ar">خدمة فنيين</a>
+                <a href="complaints.html" class="text-red-500 lang-ar">الشكاوي</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="request.html" class="fixed bottom-6 left-6 z-[45] bg-red-600 text-white font-bold py-4 px-8 rounded-2xl shadow-2xl animate-pulse flex items-center gap-3 border-b-4 border-red-800 active:translate-y-1">
+        <i class="fas fa-tools"></i> <span class="lang-ar text-sm">طلب فني</span><span class="lang-en text-sm">Request Tech</span>
+    </a>
+
+    <section class="relative h-[45vh] overflow-hidden bg-black">
+        <img src="saniaua.jpeg" class="absolute w-full h-full object-cover opacity-60" alt="Work">
+        <div class="absolute inset-0 flex flex-col justify-center px-6 text-white z-20">
+            <h1 class="text-4xl font-black mb-2 lang-ar leading-tight">كهربتنا.. <br><span class="text-brand">في أيدٍ أمينة</span></h1>
+            <h1 class="text-3xl font-black mb-2 lang-en leading-tight">Kahrabtna.. <br><span class="text-brand">Safe Hands</span></h1>
+            <p class="text-[10px] bg-brand inline-block px-3 py-1 rounded-lg self-start lang-ar mt-2 font-bold uppercase">يصلك الفني في 60 دقيقة داخل التجمع</p>
+        </div>
+    </section>
+
+    <section class="py-10 px-4">
+        <h2 class="text-center font-black text-brand mb-6 lang-ar tracking-widest">تخصصاتنا</h2>
+        <div class="grid grid-cols-2 gap-3">
+            <div class="bg-white dark:bg-darkCard p-4 rounded-2xl text-center shadow-sm border border-gray-100 dark:border-gray-800">
+                <i class="fas fa-home text-brand text-xl mb-1"></i>
+                <p class="font-bold text-[10px] lang-ar">قطاع سكني</p>
+            </div>
+            <div class="bg-white dark:bg-darkCard p-4 rounded-2xl text-center shadow-sm border border-gray-100 dark:border-gray-800">
+                <i class="fas fa-building text-brand text-xl mb-1"></i>
+                <p class="font-bold text-[10px] lang-ar">قطاع إداري</p>
+            </div>
+            <div class="bg-white dark:bg-darkCard p-4 rounded-2xl text-center shadow-sm border border-gray-100 dark:border-gray-800">
+                <i class="fas fa-shopping-cart text-brand text-xl mb-1"></i>
+                <p class="font-bold text-[10px] lang-ar">قطاع تجاري</p>
+            </div>
+            <div class="bg-white dark:bg-darkCard p-4 rounded-2xl text-center shadow-sm border border-gray-100 dark:border-gray-800">
+                <i class="fas fa-hospital-alt text-brand text-xl mb-1"></i>
+                <p class="font-bold text-[10px] lang-ar">قطاع صحي</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 px-4 bg-gray-100 dark:bg-darkCard/30">
+        <h2 class="text-center font-black text-brand mb-6 lang-ar tracking-widest uppercase">خدماتنا</h2>
+        <div class="grid grid-cols-2 gap-3 text-white">
+            <div class="bg-brand p-5 rounded-3xl text-center shadow-md">
+                <i class="fas fa-paint-roller mb-1 text-xl"></i>
+                <p class="font-bold text-[11px] lang-ar">تشطيب</p>
+            </div>
+            <div class="bg-brand p-5 rounded-3xl text-center shadow-md">
+                <i class="fas fa-tools mb-1 text-xl"></i>
+                <p class="font-bold text-[11px] lang-ar">تأسيس</p>
+            </div>
+            <div class="bg-brand p-5 rounded-3xl text-center shadow-md">
+                <i class="fas fa-bolt mb-1 text-xl"></i>
+                <p class="font-bold text-[11px] lang-ar">صيانة سريعة</p>
+            </div>
+            <div class="bg-brand p-5 rounded-3xl text-center shadow-md">
+                <i class="fas fa-microchip mb-1 text-xl"></i>
+                <p class="font-bold text-[11px] lang-ar">كنترول</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-12 px-5">
+        <h2 class="text-2xl font-extrabold border-brand pr-4 border-r-8 lang-ar">أبرز أعمالنا</h2>
+        <div class="grid gap-6 mt-8">
+            <div class="project-card bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+                <img src="naforabadr.jpeg" class="w-full h-44 object-cover">
+                <div class="p-5">
+                    <span class="text-[9px] bg-brand text-white px-3 py-1 rounded-full font-bold">Control</span>
+                    <h3 class="font-bold lang-ar mt-2">نافورة جامعة بدر (BUC)</h3>
+                    <p class="text-[10px] text-gray-500 mt-1">تصميم وتنفيذ لوحات الكنترول والكهرباء.</p>
+                </div>
+            </div>
+            <div class="project-card bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+                <img src="nafortborsaed.jpeg" class="w-full h-44 object-cover">
+                <div class="p-5">
+                    <span class="text-[9px] bg-brand text-white px-3 py-1 rounded-full font-bold">Public Space</span>
+                    <h3 class="font-bold lang-ar mt-2">نافورة ميدان بورسعيد</h3>
+                    <p class="text-[10px] text-gray-500 mt-1">تنفيذ الإضاءة المائية وأنظمة التشغيل.</p>
+                </div>
+            </div>
+            <div class="project-card bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6191dae10c?auto=format&fit=crop&w=600" class="w-full h-44 object-cover">
+                <div class="p-5"><h3 class="font-bold lang-ar">فيلا ليان (17+ فيلا)</h3></div>
+            </div>
+            <div class="project-card bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+                <img src="esbreso.jpeg" class="w-full h-44 object-cover">
+                <div class="p-5"><h3 class="font-bold lang-ar">اسبريسو لاب (التجمع و الماظة)</h3></div>
+            </div>
+            <div class="project-card bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+                <img src="labwar.jpeg" class="w-full h-44 object-cover">
+                <div class="p-5"><h3 class="font-bold lang-ar">لابوار كافيه - مدينتي</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="about" class="bg-gray-100 dark:bg-darkCard pt-16 pb-12 px-8 rounded-t-[3rem] border-t border-brand/10">
+        <div class="text-center max-w-xl mx-auto">
+            <img src="kkkkkkk.jpeg" class="h-14 mx-auto mb-4 grayscale dark:invert">
+            
+            <div class="bg-white dark:bg-darkBg p-6 rounded-[2rem] shadow-inner mb-8 text-right space-y-4">
+                <div><h4 class="font-bold text-brand lang-ar border-r-2 border-brand pr-2">رؤيتنا</h4><p class="text-[11px] text-gray-600 dark:text-gray-400 lang-ar mt-1">الريادة في حلول الكهرباء والأنظمة الذكية في مصر.</p></div>
+                <div><h4 class="font-bold text-brand lang-ar border-r-2 border-brand pr-2">رسالتنا</h4><p class="text-[11px] text-gray-600 dark:text-gray-400 lang-ar mt-1">تقديم أعلى معايير الجودة والالتزام لضمان رضا عملائنا.</p></div>
+            </div>
+
+            <div class="flex justify-center gap-8 text-xl text-gray-400 mb-8">
+                <a href="https://www.facebook.com/share/18oVDbP1Mz/" class="hover:text-brand transition-all hover:scale-125"><i class="fab fa-facebook"></i></a>
+                <a href="tiktok.com/@kahrabtna" class="hover:text-brand transition-all hover:scale-125"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/201037165697" class="hover:text-brand transition-all hover:scale-125"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <div class="border-t border-gray-200 dark:border-gray-800 pt-6">
+                <p class="text-[9px] text-gray-400 uppercase tracking-widest font-medium">Developed & Managed by: <span class="text-brand font-bold">Hossam Abdo</span></p>
+                <p class="text-[8px] text-gray-500 mt-2">© 2026 KAHRABTNA. Ahmed Soliman & Mohamed Alish</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const h = document.getElementById('mainHtml');
+            const isAr = h.getAttribute('lang') === 'ar';
+            h.setAttribute('lang', isAr ? 'en' : 'ar');
+            h.setAttribute('dir', isAr ? 'ltr' : 'rtl');
+        }
+        document.getElementById('themeToggle').onclick = () => document.documentElement.classList.toggle('dark');
+        function toggleMenu(s) {
+            const m = document.getElementById('mobileMenu');
+            const c = document.getElementById('menuContent');
+            if(s) { m.classList.remove('hidden'); setTimeout(() => c.classList.replace('menu-hidden', 'menu-visible'), 10); }
+            else { c.classList.replace('menu-visible', 'menu-hidden'); setTimeout(() => m.classList.add('hidden'), 300); }
+        }
+        document.getElementById('menuBtn').onclick = () => toggleMenu(true);
+    </script>
+</body>
+</html>

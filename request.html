@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>طلب فني | كهربتنا</title>
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#008ba3">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { brand: '#008ba3', darkBg: '#121212', darkCard: '#1e1e1e' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .bg-pattern {
+            background-color: #f9fafb;
+            background-image: radial-gradient(#008ba312 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-pattern dark:bg-darkBg min-h-screen flex flex-col items-center p-6">
+
+    <div class="w-full max-w-md mb-4">
+        <a href="index.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-brand font-bold transition-colors text-sm">
+            <i class="fas fa-arrow-right"></i>
+            <span>العودة للرئيسية</span>
+        </a>
+    </div>
+
+    <div class="bg-white dark:bg-darkCard w-full max-w-md rounded-[2.5rem] shadow-2xl border border-brand/10 p-8 text-center">
+        
+        <div class="flex items-center justify-center gap-3 mb-6">
+            <img src="kkkkkkk.jpeg" class="h-12 w-12 rounded-2xl shadow-md" alt="Logo">
+            <div class="text-right">
+                <h1 class="text-xl font-black text-brand leading-none">كهربتنا</h1>
+                <span class="text-[9px] text-gray-400 uppercase tracking-widest font-bold">Safe Electrical Solutions</span>
+            </div>
+        </div>
+
+        <div class="mb-8 bg-brand text-white py-3 px-4 rounded-2xl shadow-lg transform -rotate-1">
+            <p class="text-xs font-black tracking-wide">
+                <i class="fas fa-rocket ml-1"></i> أول مرة في مصر: صيانة في 60 دقيقة فقط!
+            </p>
+        </div>
+
+        <a href="https://wa.me/201037165697" class="group relative inline-flex items-center justify-center w-full py-7 bg-[#25D366] text-white rounded-[2rem] font-black text-2xl shadow-[0_15px_30px_rgba(37,211,102,0.3)] hover:scale-[1.02] active:scale-95 transition-all mb-10">
+            <i class="fab fa-whatsapp ml-3 text-4xl animate-bounce"></i>
+            <span>طلب فني الآن</span>
+            <span class="absolute inset-0 rounded-[2rem] bg-[#25D366] animate-ping opacity-10 -z-10"></span>
+        </a>
+
+        <div class="text-right space-y-4">
+            <div class="flex items-center gap-2 mb-4 border-b border-gray-100 dark:border-gray-800 pb-2">
+                <i class="fas fa-list-check text-brand text-xl"></i>
+                <h3 class="text-lg font-extrabold text-gray-700 dark:text-gray-200">إرشادات الطلب السريع:</h3>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="flex items-start gap-4 bg-gray-50 dark:bg-darkBg p-4 rounded-2xl border-r-4 border-brand">
+                    <p class="text-[11px] font-bold text-gray-600 dark:text-gray-300 leading-relaxed">اضغط على الزر الأخضر للانتقال للواتساب مباشرة.</p>
+                </div>
+
+                <div class="flex items-start gap-4 bg-gray-50 dark:bg-darkBg p-4 rounded-2xl border-r-4 border-brand">
+                    <p class="text-[11px] font-bold text-gray-600 dark:text-gray-300 leading-relaxed">اكتب اسمك، عنوانك بالتفصيل، ونوع العطل.</p>
+                </div>
+
+                <div class="flex items-start gap-4 bg-gray-50 dark:bg-darkBg p-4 rounded-2xl border-r-4 border-brand">
+                    <p class="text-[11px] font-bold text-gray-600 dark:text-gray-300 leading-relaxed">أرسل "لوكيشن ثابت" لتسريع وصول الفني.</p>
+                </div>
+
+                <div class="flex items-start gap-4 bg-gray-50 dark:bg-darkBg p-4 rounded-2xl border-r-4 border-brand">
+                    <p class="text-[11px] font-bold text-gray-600 dark:text-gray-300 leading-relaxed">سنرسل لك "لايف لوكيشن" للفني لتتابعه حتى وصوله.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-auto py-8 text-center">
+        <p class="text-[9px] text-gray-400 uppercase tracking-widest font-bold">Web Developed & Managed by: <span class="text-brand">Hossam Abdo</span></p>
+    </footer>
+
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</body>
+</html>
